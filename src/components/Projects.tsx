@@ -6,26 +6,15 @@ import { ExternalLink, Github, Smartphone, Globe, Brain, ShoppingCart } from "lu
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered Task Manager",
-      description: "Intelligent task management application that uses machine learning to predict task completion times and suggest optimal scheduling. Built with React, Node.js, and TensorFlow.js.",
+      title: "AI-Powered Quiz Manager",
+      description: "Intelligent Quiz management application that uses machine learning to predict task completion times and suggest optimal scheduling. Built with React, Node.js, and TensorFlow.js.",
       icon: <Brain className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
       technologies: ["React", "Node.js", "TensorFlow.js", "MongoDB", "Express"],
-      features: ["Smart scheduling", "Productivity analytics", "Team collaboration", "AI predictions"],
-      demoUrl: "#",
-      githubUrl: "#",
+      features: ["Smart scheduling", "Productivity analytics", "Team collaboration", "Seamless Connectivity"],
+      demoUrl: "https://oasisquiz.lovable.app/",
+      githubUrl: "https://github.com/Heyykrishnna/quiz-oasis-portal",
       type: "Web Application"
-    },
-    {
-      title: "E-Commerce Mobile App",
-      description: "Full-featured React Native e-commerce application with real-time inventory, secure payments, and personalized recommendations using collaborative filtering algorithms.",
-      icon: <ShoppingCart className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      technologies: ["React Native", "Firebase", "Stripe API", "Redux", "Python"],
-      features: ["Real-time inventory", "Secure payments", "Push notifications", "Recommendation engine"],
-      demoUrl: "#",
-      githubUrl: "#",
-      type: "Mobile App"
     },
     {
       title: "Data Visualization Dashboard",
@@ -48,7 +37,17 @@ const Projects = () => {
       demoUrl: "#",
       githubUrl: "#",
       type: "AI/ML Application"
-    }
+    },
+    {
+      title: "Trading Hunt",
+      description: "Full-featured React Native Trading application with real-time Pricing, secure payments, and personalized recommendations using collaborative filtering algorithms.",
+      icon: <Trading className="w-8 h-8" />,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      technologies: ["React Native", "Firebase", "Stripe API", "Redux", "Python"],
+      features: ["Real-time inventory", "Secure payments", "Push notifications", "Recommendation engine"],
+      githubUrl: "https://github.com/Heyykrishnna/Bitcoin_temp",
+      type: "Website"
+    },
   ];
 
   return (
@@ -161,7 +160,7 @@ const Projects = () => {
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             asChild
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Heyykrishnna" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
             </a>
