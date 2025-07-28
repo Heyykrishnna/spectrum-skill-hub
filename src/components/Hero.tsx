@@ -28,8 +28,9 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
-        <span></span>
-        </div>
+        <span className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6">
+        </span>
+      </div>
       
         <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
           <span className="text-primary drop-shadow-lg">
