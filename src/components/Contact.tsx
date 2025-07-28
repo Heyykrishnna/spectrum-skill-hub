@@ -190,8 +190,7 @@ const Contact = () => {
                   className="bg-background/10 text-primary-foreground border border-primary-foreground/20 hover:bg-background/20 transition-all duration-300"
                 >
                   <a href="https://drive.google.com/file/d/1dw2Cs8trH-pGRpbrCJJJGJMx4WFUFMm3/view?usp=sharing">
-                  <Download className="w-5 h-5 mr-2" /> Download PDF
-                  </a>
+                  <Download className="w-5 h-5 mr-2" />Download PDF </a>
                 </Button>
               </CardContent>
             </Card>
