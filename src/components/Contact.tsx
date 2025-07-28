@@ -52,10 +52,10 @@ const Contact = () => {
     <section id="contact" className="py-20 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Let's Connect
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Let's <span className="heading-gradient">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-inter">
             Ready to collaborate on innovative projects or discuss exciting opportunities? 
             Let's build something amazing together!
           </p>

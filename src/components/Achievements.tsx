@@ -65,10 +65,10 @@ const Achievements = () => {
     <section id="achievements" className="py-20 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Achievements & Milestones
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Achievements & <span className="heading-gradient">Milestones</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-inter">
             Recognition for dedication, innovation, and excellence in technology and academics
           </p>
         </div>

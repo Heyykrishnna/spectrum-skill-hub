@@ -33,13 +33,17 @@ const Hero = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-          Yatharth
+        <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
+          <span className="name-gradient shadow-text-glow">
+            Yatharth
+          </span>
           <br />
-          <span className="text-accent">Khandelwal</span>
+          <span className="name-gradient shadow-text-glow">
+            Khandelwal
+          </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed font-inter">
           Crafting intelligent solutions with code. Building tomorrow's technology today through 
           <span className="text-primary font-semibold"> AI </span> and 
           <span className="text-accent font-semibold"> Full Stack Development</span>
