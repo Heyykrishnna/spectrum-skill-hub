@@ -41,7 +41,7 @@ const Projects = () => {
     {
       title: "Trading Hunt",
       description: "Full-featured React Native Trading application with real-time Pricing, secure payments, and personalized recommendations using collaborative filtering algorithms.",
-      icon: <Trading className="w-8 h-8" />,
+      icon: <ShoppingCart className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
       technologies: ["React Native", "Firebase", "Stripe API", "Redux", "Python"],
       features: ["Real-time inventory", "Secure payments", "Push notifications", "Recommendation engine"],
