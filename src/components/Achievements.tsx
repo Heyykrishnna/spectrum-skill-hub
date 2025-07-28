@@ -7,15 +7,15 @@ const Achievements = () => {
     {
       icon: <Trophy className="w-8 h-8" />,
       title: "Hackathon Winner",
-      description: "1st Place at TechFest 2024 for AI-powered healthcare solution",
+      description: "2nd Place at TechFest 2024 for AI-powered healthcare solution",
       date: "March 2024",
       category: "Competition",
-      badge: "Gold Medal"
+      badge: "Silver Medal"
     },
     {
       icon: <Star className="w-8 h-8" />,
       title: "Academic Excellence",
-      description: "Maintained 9.2+ CGPA in Computer Science & AI program",
+      description: "Started BTech in Computer Science & AI program",
       date: "Ongoing",
       category: "Academic",
       badge: "Top 5%"
@@ -24,41 +24,41 @@ const Achievements = () => {
       icon: <Code2 className="w-8 h-8" />,
       title: "Open Source Contributor",
       description: "50+ contributions to popular React and Python libraries",
-      date: "2023-2024",
+      date: "2023-2025",
       category: "Development",
       badge: "Active Contributor"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Team Leadership",
-      description: "Led a team of 8 developers in building campus management system",
-      date: "January 2024",
+      description: "Led a team of 8-10 developers in several competitions",
+      date: "January 2025",
       category: "Leadership",
       badge: "Project Lead"
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Research Publication",
-      description: "Co-authored paper on 'Machine Learning in Web Development'",
-      date: "February 2024",
+      description: "Co-authored paper on 'Machine Learning and Artificial Intelligence in Web Development'",
+      date: "Ongoing",
       category: "Research",
-      badge: "Published"
+      badge: "Research"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Coding Championship",
-      description: "Top 10 finish in National Programming Contest",
-      date: "December 2023",
+      description: "Top 10 finish in State Programming Contest",
+      date: "April 2024",
       category: "Competition",
       badge: "Top 10"
     }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "25+", icon: <Code2 className="w-6 h-6" /> },
-    { label: "GitHub Contributions", value: "500+", icon: <Star className="w-6 h-6" /> },
+    { label: "Projects Completed", value: "10+", icon: <Code2 className="w-6 h-6" /> },
+    { label: "GitHub Contributions", value: "100+", icon: <Star className="w-6 h-6" /> },
     { label: "Problem Solving Rank", value: "Top 15%", icon: <Target className="w-6 h-6" /> },
-    { label: "Team Projects Led", value: "8", icon: <Users className="w-6 h-6" /> }
+    { label: "Team Projects Led", value: "8-10", icon: <Users className="w-6 h-6" /> }
   ];
 
   return (
