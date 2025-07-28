@@ -50,7 +50,7 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={scrollToTop}
-            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+            className="font-orbitron text-2xl font-black text-primary hover:text-accent hover:scale-105 transition-all duration-300 drop-shadow-lg"
           >
             YK
           </button>
