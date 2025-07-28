@@ -20,9 +20,9 @@ const Skills = () => {
       icon: <Database className="w-6 h-6" />,
       skills: [
         { name: "Node.js", level: 85, color: "success" },
-        { name: "Python", level: 90, color: "accent" },
-        { name: "SQL", level: 80, color: "primary" },
-        { name: "API Development", level: 85, color: "warning" }
+        { name: "Python", level: 80, color: "accent" },
+        { name: "SQL", level: 85, color: "primary" },
+        { name: "API Development", level: 80, color: "warning" }
       ]
     },
     {
@@ -31,7 +31,7 @@ const Skills = () => {
       skills: [
         { name: "Pandas", level: 85, color: "accent" },
         { name: "Matplotlib", level: 80, color: "success" },
-        { name: "Machine Learning", level: 75, color: "primary" },
+        { name: "Machine Learning", level: 50, color: "primary" },
         { name: "Data Analysis", level: 85, color: "warning" }
       ]
     },
@@ -40,9 +40,9 @@ const Skills = () => {
       icon: <Smartphone className="w-6 h-6" />,
       skills: [
         { name: "React Native", level: 80, color: "primary" },
-        { name: "Cross-Platform", level: 75, color: "accent" },
-        { name: "App Deployment", level: 70, color: "success" },
-        { name: "UI/UX Design", level: 85, color: "warning" }
+        { name: "Cross-Platform", level: 65, color: "accent" },
+        { name: "App Deployment", level: 50, color: "success" },
+        { name: "UI/UX Design", level: 70, color: "warning" }
       ]
     }
   ];
