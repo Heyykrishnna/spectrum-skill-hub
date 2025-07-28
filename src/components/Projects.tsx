@@ -23,8 +23,6 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
       technologies: ["Python", "Pandas", "Matplotlib", "React", "D3.js"],
       features: ["Interactive charts", "Real-time updates", "Data filtering", "Export functionality"],
-      demoUrl: "",
-      githubUrl: "",
       type: "Data Science"
     },
     {
@@ -34,8 +32,6 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
       technologies: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
       features: ["Sentiment analysis", "Trend prediction", "Multi-platform support", "Custom reports"],
-      demoUrl: "",
-      githubUrl: "",
       type: "AI/ML Application"
     },
     {
