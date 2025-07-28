@@ -34,11 +34,11 @@ const Hero = () => {
         </div>
 
         <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
-          <span className="name-gradient shadow-text-glow">
+          <span className="text-primary drop-shadow-lg">
             Yatharth
           </span>
           <br />
-          <span className="name-gradient shadow-text-glow">
+          <span className="text-accent drop-shadow-lg">
             Khandelwal
           </span>
         </h1>
