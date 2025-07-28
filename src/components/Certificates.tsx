@@ -6,35 +6,35 @@ import { ExternalLink, Award, Calendar, CheckCircle } from "lucide-react";
 const Certificates = () => {
   const certificates = [
     {
-      title: "Full Stack Web Development",
-      issuer: "Meta (Facebook)",
+      title: "Deep-dive into ChatGPT and other AI tools module",
+      issuer: "Newton School",
       platform: "Coursera",
-      date: "March 2024",
-      credentialId: "META-FS-2024-YK",
-      skills: ["React", "Node.js", "MongoDB", "Express.js"],
+      date: "July 2025",
+      credentialId: "NS-AI-2025-YK",
+      skills: ["Python", "AI", "Machine learning", "LLM"],
       status: "Completed",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-      verifyUrl: "#"
+      verifyUrl: "https://my.newtonschool.co/course/yubnkx5qb3s7/certificate/ymu99v68awuv/verify?utm_source=certification&utm_medium=khandelwalyatharth39&utm_campaign=newton-headstart"
     },
     {
       title: "Machine Learning Specialization",
       issuer: "Stanford University",
       platform: "Coursera",
-      date: "February 2024",
-      credentialId: "STAN-ML-2024-YK",
+      date: "In Progress",
+      credentialId: "Expected Q3 2025",
       skills: ["Python", "TensorFlow", "Scikit-learn", "Neural Networks"],
-      status: "Completed",
+      status: "In Progress",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-      verifyUrl: "#"
+      verifyUrl: ""
     },
     {
       title: "React Native Mobile Development",
       issuer: "Google",
       platform: "Google Developers",
-      date: "January 2024",
-      credentialId: "GOOG-RN-2024-YK",
+      date: "In Progress",
+      credentialId: "Expected Q1 2026",
       skills: ["React Native", "Mobile UI", "API Integration", "App Store"],
-      status: "Completed",
+      status: "In Progress",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
       verifyUrl: "#"
     },
@@ -42,10 +42,10 @@ const Certificates = () => {
       title: "Data Science with Python",
       issuer: "IBM",
       platform: "IBM SkillsBuild",
-      date: "December 2023",
-      credentialId: "IBM-DS-2023-YK",
+      date: "In Progress",
+      credentialId: "Expected Q2 2026",
       skills: ["Pandas", "Matplotlib", "Data Analysis", "Statistics"],
-      status: "Completed",
+      status: "In Progress",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
       verifyUrl: "#"
     },
@@ -54,21 +54,10 @@ const Certificates = () => {
       issuer: "Amazon Web Services",
       platform: "AWS Training",
       date: "In Progress",
-      credentialId: "Expected Q2 2024",
+      credentialId: "Expected Q2 2026",
       skills: ["Cloud Computing", "AWS Services", "DevOps", "Scalability"],
       status: "In Progress",
       image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop",
-      verifyUrl: "#"
-    },
-    {
-      title: "Advanced JavaScript",
-      issuer: "Mozilla Developer Network",
-      platform: "MDN",
-      date: "November 2023",
-      credentialId: "MDN-JS-2023-YK",
-      skills: ["ES6+", "Async Programming", "DOM Manipulation", "Performance"],
-      status: "Completed",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
       verifyUrl: "#"
     }
   ];
@@ -175,7 +164,7 @@ const Certificates = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">15+</div>
+              <div className="text-3xl font-bold text-primary">5+</div>
               <div className="text-muted-foreground">Certifications Earned</div>
             </div>
             <div className="space-y-2">
@@ -183,7 +172,7 @@ const Certificates = () => {
               <div className="text-muted-foreground">Hours of Learning</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-success">8</div>
+              <div className="text-3xl font-bold text-success">10</div>
               <div className="text-muted-foreground">Tech Domains Covered</div>
             </div>
           </div>
