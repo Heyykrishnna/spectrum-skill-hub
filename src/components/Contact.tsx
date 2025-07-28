@@ -10,19 +10,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "yatharth.khandelwal@example.com",
-      href: "mailto:yatharth.khandelwal@example.com"
+      value: "yatharth.khandelwal39@gmail.com",
+      href: "mailto:yatharth.khandelwal39@gmail.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
+      value: "+91 79873 98516",
+      href: "tel:+917987398516"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "Newton School of Technology, India",
+      value: "India, भारत",
       href: "#"
     }
   ];
@@ -31,20 +31,20 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      href: "https://github.com",
-      username: "@yatharthkhandelwal"
+      href: "https://github.com/Heyykrishnna",
+      username: "@Heyykrishnna"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/yatharth-khandelwal-krishna/",
       username: "Yatharth Khandelwal"
     },
     {
       icon: <Twitter className="w-5 h-5" />,
       label: "Twitter",
-      href: "https://twitter.com",
-      username: "@yatharth_dev"
+      href: "https://x.com/hey_krishnna",
+      username: "@yatharth"
     }
   ];
 
