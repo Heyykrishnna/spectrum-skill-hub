@@ -87,6 +87,7 @@ export default {
 			fontFamily: {
 				'orbitron': ['Orbitron', 'monospace'],
 				'inter': ['Inter', 'sans-serif'],
+				'serif': ['Source Serif 4', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -55,7 +55,7 @@ const Contact = () => {
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Let's <span className="heading-gradient">Connect</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-serif">
             Ready to collaborate on innovative projects or discuss exciting opportunities? 
             Let's build something amazing together!
           </p>
@@ -181,7 +181,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-4 text-primary-foreground">
                   Download My Resume
                 </h3>
-                <p className="text-primary-foreground/80 mb-6">
+                <p className="text-primary-foreground/80 mb-6 font-serif">
                   Get a detailed overview of my experience, skills, and achievements
                 </p>
                 <Button

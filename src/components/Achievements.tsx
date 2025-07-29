@@ -68,7 +68,7 @@ const Achievements = () => {
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Achievements & <span className="heading-gradient">Milestones</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-serif">
             Recognition for dedication, innovation, and excellence in technology and academics
           </p>
         </div>
@@ -115,7 +115,7 @@ const Achievements = () => {
                   {achievement.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed font-serif">
                   {achievement.description}
                 </p>
 

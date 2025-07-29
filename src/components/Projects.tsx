@@ -53,7 +53,7 @@ const Projects = () => {
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Featured <span className="heading-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-serif">
             Innovative solutions that showcase the intersection of creativity, technology, and real-world impact
           </p>
         </div>
@@ -90,7 +90,7 @@ const Projects = () => {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-serif">
                   {project.description}
                 </p>
 
