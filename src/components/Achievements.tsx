@@ -78,7 +78,7 @@ const Achievements = () => {
           {stats.map((stat, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary/20 text-center"
+              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300 hover:shadow-glow-primary/20 text-center"
             >
               <CardContent className="p-6">
                 <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground mx-auto mb-4">
@@ -96,7 +96,7 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary/20 group"
+              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300 hover:shadow-glow-primary/20 group"
             >
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">

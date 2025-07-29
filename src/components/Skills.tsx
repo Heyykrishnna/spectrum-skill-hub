@@ -71,7 +71,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary/20"
+              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300 hover:shadow-glow-primary/20"
             >
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">

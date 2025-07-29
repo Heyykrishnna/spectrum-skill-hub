@@ -63,7 +63,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300">
+          <Card className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 text-card-foreground">
                 Send me a message
@@ -120,7 +120,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <Card className="bg-card/50 border-border/50">
+            <Card className="bg-card/50 border border-border/80">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-card-foreground">
                   Get in touch
@@ -147,7 +147,7 @@ const Contact = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="bg-card/50 border-border/50">
+            <Card className="bg-card/50 border border-border/80">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-card-foreground">
                   Follow me
