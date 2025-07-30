@@ -18,7 +18,7 @@ const CodingProfiles = () => {
       bgColor: "bg-orange-500/10"
     },
     {
-      name: "Hackerearth",
+      name: "HackerEarth",
       username: "khandelwalyatharth39",
       profileUrl: "https://www.hackerearth.com/@khandelwalyatharth39/",
       stats: [
@@ -63,7 +63,7 @@ const CodingProfiles = () => {
       metric: "1450+ Rating"
     },
     {
-      title: "5-Star Python badge on HackerRank", 
+      title: "5-Star Python badge on HackerEarth", 
       description: "Mastered Python programming challenges and algorithms",
       icon: <Star className="w-5 h-5" />,
       metric: "Gold Badge"
