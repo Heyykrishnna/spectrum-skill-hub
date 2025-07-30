@@ -7,32 +7,32 @@ const CodingProfiles = () => {
   const platforms = [
     {
       name: "LeetCode",
-      username: "yatharth_k39",
-      profileUrl: "https://leetcode.com/u/yatharth_k39/",
+      username: "yatharth_khandelwal",
+      profileUrl: "https://leetcode.com/u/yatharth_khandelwal/",
       stats: [
-        { label: "Problems Solved", value: "150+", icon: <Code className="w-4 h-4" /> },
-        { label: "Contest Rating", value: "1450", icon: <Trophy className="w-4 h-4" /> },
-        { label: "Global Ranking", value: "Top 15%", icon: <Target className="w-4 h-4" /> }
+        { label: "Problems Solved", value: "50+", icon: <Code className="w-4 h-4" /> },
+        { label: "Contest Rating", value: "2000", icon: <Trophy className="w-4 h-4" /> },
+        { label: "Global Ranking", value: "Top 45%", icon: <Target className="w-4 h-4" /> }
       ],
       color: "from-orange-500 to-yellow-500",
       bgColor: "bg-orange-500/10"
     },
     {
-      name: "HackerRank",
-      username: "yatharth_khan39",
-      profileUrl: "https://www.hackerrank.com/profile/yatharth_khan39",
+      name: "Hackerearth",
+      username: "khandelwalyatharth39",
+      profileUrl: "https://www.hackerearth.com/@khandelwalyatharth39/",
       stats: [
         { label: "5 Star Python", value: "Gold", icon: <Star className="w-4 h-4" /> },
         { label: "Problem Solving", value: "4 Star", icon: <Code className="w-4 h-4" /> },
-        { label: "Algorithms", value: "Advanced", icon: <Target className="w-4 h-4" /> }
+        { label: "Algorithms", value: "Intermediate", icon: <Target className="w-4 h-4" /> }
       ],
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-500/10"
     },
     {
       name: "GeeksforGeeks",
-      username: "yatharthkhandelwal",
-      profileUrl: "https://www.geeksforgeeks.org/user/yatharthkhandelwal/",
+      username: "khandelwalyuxzg",
+      profileUrl: "https://www.geeksforgeeks.org/user/khandelwalyuxzg/",
       stats: [
         { label: "Contest Rating", value: "1200+", icon: <Trophy className="w-4 h-4" /> },
         { label: "Problems Solved", value: "100+", icon: <Code className="w-4 h-4" /> },
@@ -43,12 +43,12 @@ const CodingProfiles = () => {
     },
     {
       name: "CodeChef",
-      username: "yatharth_k39",
-      profileUrl: "https://www.codechef.com/users/yatharth_k39",
+      username: "yatharth_39",
+      profileUrl: "https://www.codechef.com/users/yatharth_39",
       stats: [
         { label: "Highest Rating", value: "1400+", icon: <Trophy className="w-4 h-4" /> },
         { label: "Division", value: "3 Star", icon: <Star className="w-4 h-4" /> },
-        { label: "Contests", value: "25+", icon: <Target className="w-4 h-4" /> }
+        { label: "Contests", value: "5+", icon: <Target className="w-4 h-4" /> }
       ],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-500/10"
