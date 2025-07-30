@@ -46,7 +46,7 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="prose prose-invert max-w-none font-mono">
+            <div className="prose prose-invert max-w-none font-mono space-y-6">
               <p className="text-lg leading-relaxed text-foreground/90">
                 Hey there! I'm <span className="text-primary font-semibold">Yatharth Khandelwal</span>, 
                 a BTech Computer Science & AI student at <span className="text-accent font-semibold">Newton School of Technology</span>. 
