@@ -56,10 +56,30 @@ const CodingProfiles = () => {
   ];
 
   const achievements = [
-    "Top 15% globally on LeetCode",
-    "5-Star Python badge on HackerRank", 
-    "Consistent contest participation across platforms",
-    "Strong problem-solving track record"
+    {
+      title: "Top 15% globally on LeetCode",
+      description: "Consistently solving problems across all difficulty levels",
+      icon: <Target className="w-5 h-5" />,
+      metric: "1450+ Rating"
+    },
+    {
+      title: "5-Star Python badge on HackerRank", 
+      description: "Mastered Python programming challenges and algorithms",
+      icon: <Star className="w-5 h-5" />,
+      metric: "Gold Badge"
+    },
+    {
+      title: "Consistent contest participation",
+      description: "Active participation across multiple coding platforms",
+      icon: <Trophy className="w-5 h-5" />,
+      metric: "50+ Contests"
+    },
+    {
+      title: "Strong problem-solving track record",
+      description: "Solved 400+ problems across various topics and difficulties",
+      icon: <Code className="w-5 h-5" />,
+      metric: "400+ Problems"
+    }
   ];
 
   return (
@@ -132,34 +152,107 @@ const CodingProfiles = () => {
           ))}
         </div>
 
-        {/* Achievements Overview */}
-        <Card className="bg-gradient-primary border-0">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-6 text-primary-foreground">
-              Key Achievements
+        {/* Enhanced Achievements Section */}
+        <div className="space-y-8">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold mb-4 text-foreground">
+              Key <span className="heading-gradient">Achievements</span>
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-              {achievements.map((achievement, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center gap-3 text-primary-foreground/90 font-mono"
-                >
-                  <div className="w-2 h-2 rounded-full bg-primary-foreground flex-shrink-0" />
-                  {achievement}
-                </div>
-              ))}
-            </div>
-            <div className="mt-8">
-              <Badge 
-                variant="secondary" 
-                className="bg-background/10 text-primary-foreground border border-primary-foreground/20 px-6 py-2 text-lg"
+            <p className="text-muted-foreground font-mono max-w-2xl mx-auto">
+              Milestones that showcase dedication to competitive programming and continuous improvement
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => (
+              <Card 
+                key={index} 
+                className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300 hover:shadow-glow-primary/20 group cursor-pointer overflow-hidden"
               >
-                <Trophy className="w-5 h-5 mr-2" />
-                Consistent Problem Solver
-              </Badge>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      {achievement.icon}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-bold text-card-foreground text-lg leading-tight">
+                          {achievement.title}
+                        </h4>
+                        <Badge 
+                          variant="secondary" 
+                          className="bg-primary/10 text-primary border-primary/30 ml-2 flex-shrink-0"
+                        >
+                          {achievement.metric}
+                        </Badge>
+                      </div>
+                      <p className="text-muted-foreground font-mono text-sm leading-relaxed">
+                        {achievement.description}
+                      </p>
+                      
+                      {/* Progress indicator */}
+                      <div className="mt-4 relative">
+                        <div className="w-full h-1 bg-border/50 rounded-full overflow-hidden">
+                          <div 
+                            className="h-full bg-gradient-primary transition-all duration-1000 ease-out group-hover:animate-pulse"
+                            style={{ 
+                              width: index === 0 ? '85%' : index === 1 ? '100%' : index === 2 ? '75%' : '90%',
+                              animationDelay: `${index * 200}ms`
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Summary Stats */}
+          <Card className="bg-gradient-primary border-0 overflow-hidden relative">
+            <div className="absolute inset-0 opacity-30">
+              <div className="w-full h-full bg-repeat" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`,
+                backgroundSize: '20px 20px'
+              }}></div>
             </div>
-          </CardContent>
-        </Card>
+            <CardContent className="p-8 text-center relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-background/10 backdrop-blur-sm flex items-center justify-center border border-primary-foreground/20">
+                  <Trophy className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-2xl font-bold text-primary-foreground">
+                    Coding Excellence
+                  </h3>
+                  <p className="text-primary-foreground/80 font-mono">
+                    Competitive Programming Journey
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary-foreground mb-1">400+</div>
+                  <div className="text-primary-foreground/80 text-sm font-mono">Problems Solved</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary-foreground mb-1">50+</div>
+                  <div className="text-primary-foreground/80 text-sm font-mono">Contests Joined</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary-foreground mb-1">4</div>
+                  <div className="text-primary-foreground/80 text-sm font-mono">Active Platforms</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary-foreground mb-1">Top 15%</div>
+                  <div className="text-primary-foreground/80 text-sm font-mono">Global Ranking</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
