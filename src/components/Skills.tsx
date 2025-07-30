@@ -61,7 +61,7 @@ const Skills = () => {
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Technical <span className="heading-gradient">Arsenal</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-serif">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono">
             A comprehensive toolkit for building innovative solutions across the full technology stack
           </p>
         </div>

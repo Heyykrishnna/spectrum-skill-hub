@@ -42,7 +42,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed font-serif">
+        <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
           Crafting intelligent solutions with code. Building tomorrow's technology today through 
           <span className="text-primary font-semibold"> AI </span> and 
           <span className="text-accent font-semibold"> Full Stack Development</span>

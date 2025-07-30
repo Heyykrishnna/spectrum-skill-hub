@@ -88,6 +88,7 @@ export default {
 				'orbitron': ['Orbitron', 'monospace'],
 				'inter': ['Inter', 'sans-serif'],
 				'serif': ['Source Serif 4', 'serif'],
+				'mono': ['Intel One Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

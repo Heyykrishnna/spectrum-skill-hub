@@ -39,14 +39,14 @@ const About = () => {
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
             About <span className="heading-gradient">Me</span>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-serif">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono">
             Passionate about bridging the gap between human creativity and artificial intelligence
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="prose prose-invert max-w-none font-serif">
+            <div className="prose prose-invert max-w-none font-mono">
               <p className="text-lg leading-relaxed text-foreground/90">
                 Hey there! I'm <span className="text-primary font-semibold">Yatharth Khandelwal</span>, 
                 a BTech Computer Science & AI student at <span className="text-accent font-semibold">Newton School of Technology</span>. 
@@ -99,7 +99,7 @@ const About = () => {
                       <h4 className="font-semibold text-lg mb-2 text-card-foreground">
                         {item.title}
                       </h4>
-                      <p className="text-muted-foreground leading-relaxed font-serif">
+                      <p className="text-muted-foreground leading-relaxed font-mono">
                         {item.description}
                       </p>
                     </div>
