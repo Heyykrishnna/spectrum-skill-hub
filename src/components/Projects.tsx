@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Smartphone, Globe, Brain, ShoppingCart } from "lucide-react";
+import { ExternalLink, Github, Smartphone, Globe, Brain, ShoppingCart, Eye, Star, Calendar } from "lucide-react";
 
 const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const projects = [
     {
       title: "AI-Powered Quiz Manager",
@@ -14,7 +16,11 @@ const Projects = () => {
       features: ["Smart scheduling", "Productivity analytics", "Team collaboration", "Seamless Connectivity"],
       demoUrl: "https://oasisquiz.lovable.app/",
       githubUrl: "https://github.com/Heyykrishnna/quiz-oasis-portal",
-      type: "Web Application"
+      type: "Web Application",
+      status: "Live",
+      year: "2024",
+      stars: 42,
+      category: "AI/ML"
     },
     {
       title: "Data Visualization Dashboard",
@@ -23,7 +29,11 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
       technologies: ["Python", "Pandas", "Matplotlib", "React", "D3.js"],
       features: ["Interactive charts", "Real-time updates", "Data filtering", "Export functionality"],
-      type: "Data Science"
+      type: "Data Science",
+      status: "In Development",
+      year: "2024",
+      stars: 28,
+      category: "Data Science"
     },
     {
       title: "Social Media Analytics Tool",
@@ -32,7 +42,11 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
       technologies: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
       features: ["Sentiment analysis", "Trend prediction", "Multi-platform support", "Custom reports"],
-      type: "AI/ML Application"
+      type: "AI/ML Application",
+      status: "Coming Soon",
+      year: "2024",
+      stars: 15,
+      category: "AI/ML"
     },
     {
       title: "Trading Hunt",
@@ -42,7 +56,11 @@ const Projects = () => {
       technologies: ["React Native", "Firebase", "Stripe API", "Redux", "Python"],
       features: ["Real-time inventory", "Secure payments", "Push notifications", "Recommendation engine"],
       githubUrl: "https://github.com/Heyykrishnna/Bitcoin_temp",
-      type: "Website"
+      type: "Mobile App",
+      status: "Live",
+      year: "2023",
+      stars: 67,
+      category: "Mobile"
     },
   ];
 
@@ -62,50 +80,93 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-500 hover:shadow-glow-primary/20 group overflow-hidden"
+              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-500 hover:shadow-glow-primary/20 group overflow-hidden animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-56 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
-                <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
-                    {project.type}
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                
+                {/* Status and Category Badges */}
+                <div className="absolute top-4 right-4 flex flex-col gap-2">
+                  <Badge 
+                    variant="secondary" 
+                    className={`
+                      ${project.status === 'Live' ? 'bg-success/20 text-success border-success/30' : ''}
+                      ${project.status === 'In Development' ? 'bg-warning/20 text-warning border-warning/30' : ''}
+                      ${project.status === 'Coming Soon' ? 'bg-accent/20 text-accent border-accent/30' : ''}
+                      transition-all duration-300 hover:scale-105
+                    `}
+                  >
+                    {project.status}
+                  </Badge>
+                  <Badge variant="outline" className="bg-background/10 backdrop-blur-sm border-primary/30 text-primary">
+                    {project.category}
                   </Badge>
                 </div>
+
+                {/* Project Icon */}
                 <div className="absolute bottom-4 left-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                     {project.icon}
                   </div>
                 </div>
+
+                {/* Year Badge */}
+                <div className="absolute bottom-4 right-4">
+                  <div className="flex items-center gap-1 px-2 py-1 rounded-lg bg-background/20 backdrop-blur-sm text-xs text-foreground/80">
+                    <Calendar className="w-3 h-3" />
+                    {project.year}
+                  </div>
+                </div>
+
+                {/* Overlay for hover effect */}
+                <div className={`absolute inset-0 bg-primary/10 transition-all duration-300 ${hoveredProject === index ? 'opacity-100' : 'opacity-0'}`} />
               </div>
 
-              <CardHeader>
-                <CardTitle className="text-xl text-card-foreground">
-                  {project.title}
-                </CardTitle>
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-xl text-card-foreground group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </CardTitle>
+                  <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <Star className="w-4 h-4 fill-warning text-warning" />
+                    {project.stars}
+                  </div>
+                </div>
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed font-mono">
+                <p className="text-muted-foreground leading-relaxed font-mono text-sm">
                   {project.description}
                 </p>
 
+                {/* Key Features with enhanced styling */}
                 <div>
-                  <h4 className="font-semibold mb-3 text-card-foreground">Key Features</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <h4 className="font-semibold mb-3 text-card-foreground flex items-center gap-2">
+                    <Eye className="w-4 h-4 text-primary" />
+                    Key Features
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
                     {project.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <div 
+                        key={featureIndex} 
+                        className="flex items-center gap-3 text-sm text-muted-foreground py-1 px-2 rounded-md bg-secondary/30 hover:bg-secondary/50 transition-colors duration-200"
+                      >
+                        <div className="w-2 h-2 rounded-full bg-gradient-primary animate-pulse" />
                         {feature}
                       </div>
                     ))}
                   </div>
                 </div>
 
+                {/* Tech Stack with better organization */}
                 <div>
                   <h4 className="font-semibold mb-3 text-card-foreground">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
@@ -113,7 +174,7 @@ const Projects = () => {
                       <Badge 
                         key={techIndex}
                         variant="outline"
-                        className="border-primary/30 text-primary hover:bg-primary/10 transition-colors duration-300"
+                        className="border-primary/30 text-primary hover:bg-primary/10 hover:scale-105 transition-all duration-300 cursor-default"
                       >
                         {tech}
                       </Badge>
@@ -121,43 +182,64 @@ const Projects = () => {
                   </div>
                 </div>
 
+                {/* Action Buttons with enhanced styling */}
                 <div className="flex gap-3 pt-4">
-                  <Button 
-                    size="sm" 
-                    className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300 flex-1"
-                    asChild
-                  >
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                  {project.demoUrl ? (
+                    <Button 
+                      size="sm" 
+                      className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300 flex-1 hover:scale-105"
+                      asChild
+                    >
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="sm" 
+                      disabled
+                      className="flex-1 opacity-50"
+                    >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex-1"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Source
-                    </a>
-                  </Button>
+                      Coming Soon
+                    </Button>
+                  )}
+                  
+                  {project.githubUrl && (
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex-1 hover:scale-105"
+                      asChild
+                    >
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Source
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* Call to Action Section */}
+        <div className="text-center mt-16 space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50">
+            <div className="w-2 h-2 rounded-full bg-success animate-pulse"></div>
+            <span className="text-sm text-muted-foreground">Actively building new projects</span>
+          </div>
+          
           <Button 
             variant="outline" 
             size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 group"
             asChild
           >
             <a href="https://github.com/Heyykrishnna" target="_blank" rel="noopener noreferrer">
-              <Github className="w-5 h-5 mr-2" />
+              <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               View All Projects on GitHub
             </a>
           </Button>
