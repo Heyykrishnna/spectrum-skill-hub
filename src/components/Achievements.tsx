@@ -25,7 +25,7 @@ const Achievements = () => {
     category: "Academic",
     badge: "Top 5%",
     status: "ongoing",
-    impact: "3.8+ GPA maintained",
+    impact: "8+ GPA maintained",
     techStack: ["DSA", "ML", "AI", "Web Dev"],
     achievements: ["Dean's list 3 semesters", "Perfect attendance", "Research projects leader"]
   }, {
