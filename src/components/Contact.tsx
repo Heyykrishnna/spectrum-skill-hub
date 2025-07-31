@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Download, Loader2 } from "lucide-react";
+import { Mail, Phone, BriefcaseBusiness, Github, Linkedin, Twitter, Send, Download, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(50, "Name must be less than 50 characters"),
@@ -77,10 +77,10 @@ const Contact = () => {
       href: "tel:+917987398516"
     },
     {
-      icon: <MapPin className="w-5 h-5" />,
-      label: "Location",
-      value: "India, भारत",
-      href: "#"
+      icon: <BriefcaseBusiness className="w-5 h-5" />,
+      label: "Connect",
+      value: "To Give order or Contract",
+      href: "https://paymentyk.vercel.app/"
     }
   ];
 
