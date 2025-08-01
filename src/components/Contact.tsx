@@ -300,9 +300,9 @@ const Contact = () => {
                     className="bg-background/10 text-primary-foreground border border-primary-foreground/20 hover:bg-background/20 transition-all duration-300"
                   >
                     <Download className="w-5 h-5 mr-2" />
+                    Download Resume
                   </Button>
                 </a>
-                </Button>
               </CardContent>
             </Card>
           </div>
