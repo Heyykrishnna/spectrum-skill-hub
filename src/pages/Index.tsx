@@ -7,6 +7,7 @@ import CodingProfiles from "@/components/CodingProfiles";
 import Achievements from "@/components/Achievements";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Achievements />
       <Certificates />
       <Contact />
+      <Footer />
     </div>
   );
 };
