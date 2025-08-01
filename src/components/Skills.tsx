@@ -1,9 +1,47 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Code, Database, Smartphone, TrendingUp } from "lucide-react";
+import { Code, Database, Smartphone, TrendingUp, Zap, Star, Rocket } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Skills = () => {
+  const [animatedValues, setAnimatedValues] = useState<Record<string, number>>({});
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          // Animate progress bars
+          setTimeout(() => {
+            skillCategories.forEach(category => {
+              category.skills.forEach(skill => {
+                const key = `${category.title}-${skill.name}`;
+                let current = 0;
+                const increment = skill.level / 50;
+                const timer = setInterval(() => {
+                  current += increment;
+                  if (current >= skill.level) {
+                    current = skill.level;
+                    clearInterval(timer);
+                  }
+                  setAnimatedValues(prev => ({ ...prev, [key]: current }));
+                }, 20);
+              });
+            });
+          }, 300);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const section = document.getElementById('skills');
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -58,12 +96,26 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Technical <span className="heading-gradient">Arsenal</span>
-          </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center animate-bounce">
+              <Zap className="w-8 h-8 text-primary-foreground" />
+            </div>
+            <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-foreground animate-fade-in">
+              Technical <span className="heading-gradient animate-pulse">Arsenal</span>
+            </h2>
+            <div className="w-16 h-16 rounded-2xl bg-gradient-secondary flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>
+              <Rocket className="w-8 h-8 text-secondary-foreground" />
+            </div>
+          </div>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono animate-fade-in" style={{ animationDelay: '0.3s' }}>
             A comprehensive toolkit for building innovative solutions across the full technology stack
           </p>
+          <div className="flex justify-center mt-6">
+            <div className="flex items-center gap-2 bg-gradient-primary/10 px-6 py-3 rounded-full border border-primary/30">
+              <Star className="w-5 h-5 text-primary animate-spin" style={{ animationDuration: '3s' }} />
+              <span className="text-primary font-semibold">Always Learning & Growing</span>
+            </div>
+          </div>
         </div>
 
         {/* Skill Categories */}
@@ -71,29 +123,53 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300 hover:shadow-glow-primary/20"
+              className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-500 hover:shadow-glow-primary/20 hover:scale-105 animate-fade-in group overflow-hidden"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-xl">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center text-primary-foreground">
+              <CardHeader className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardTitle className="flex items-center gap-3 text-xl relative z-10">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                     {category.icon}
                   </div>
-                  {category.title}
+                  <div>
+                    <div className="font-bold">{category.title}</div>
+                    <div className="text-sm text-muted-foreground font-mono">
+                      {category.skills.length} Technologies
+                    </div>
+                  </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-card-foreground">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+              <CardContent className="space-y-4 relative">
+                {category.skills.map((skill, skillIndex) => {
+                  const key = `${category.title}-${skill.name}`;
+                  const animatedValue = animatedValues[key] || 0;
+                  
+                  return (
+                    <div key={skillIndex} className="space-y-3 group/skill">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium text-card-foreground group-hover/skill:text-primary transition-colors duration-300">
+                          {skill.name}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-muted-foreground">
+                            {Math.round(animatedValue)}%
+                          </span>
+                          {animatedValue >= skill.level * 0.8 && (
+                            <Star className="w-3 h-3 text-yellow-500 animate-pulse" />
+                          )}
+                        </div>
+                      </div>
+                      <div className="relative">
+                        <Progress 
+                          value={animatedValue} 
+                          className="h-3 bg-muted/50"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity duration-500 pointer-events-none animate-pulse"></div>
+                      </div>
                     </div>
-                    <Progress 
-                      value={skill.level} 
-                      className="h-2"
-                    />
-                  </div>
-                ))}
+                  );
+                })}
               </CardContent>
             </Card>
           ))}
@@ -109,7 +185,11 @@ const Skills = () => {
               <Badge 
                 key={index}
                 variant="secondary"
-                className="bg-gradient-secondary text-secondary-foreground border border-primary/20 hover:border-primary/50 hover:shadow-glow-primary/20 transition-all duration-300 text-sm py-2 px-4 cursor-default"
+                className="bg-gradient-secondary text-secondary-foreground border border-primary/20 hover:border-primary/50 hover:shadow-glow-primary/20 hover:scale-110 transition-all duration-300 text-sm py-2 px-4 cursor-default animate-fade-in hover-scale"
+                style={{ 
+                  animationDelay: `${index * 50}ms`,
+                  animationDuration: '0.6s'
+                }}
               >
                 {tech}
               </Badge>
