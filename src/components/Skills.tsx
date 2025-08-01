@@ -96,17 +96,9 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center animate-bounce">
-              <Zap className="w-8 h-8 text-primary-foreground" />
-            </div>
-            <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-foreground animate-fade-in">
-              Technical <span className="heading-gradient animate-pulse">Arsenal</span>
-            </h2>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-secondary flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>
-              <Rocket className="w-8 h-8 text-secondary-foreground" />
-            </div>
-          </div>
+          <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-foreground animate-fade-in">
+            Technical <span className="heading-gradient animate-pulse">Arsenal</span>
+          </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono animate-fade-in" style={{ animationDelay: '0.3s' }}>
             A comprehensive toolkit for building innovative solutions across the full technology stack
           </p>
