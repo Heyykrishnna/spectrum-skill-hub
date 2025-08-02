@@ -116,39 +116,49 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className={`md:hidden relative z-60 transition-all duration-300 ${
-                isOpen ? 'text-primary' : 'text-foreground'
-              }`}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <div className="relative">
-                <Menu 
-                  size={24} 
-                  className={`absolute transition-all duration-300 ${
-                    isOpen ? 'opacity-0 rotate-180 scale-75' : 'opacity-100 rotate-0 scale-100'
-                  }`} 
-                />
-                <X 
-                  size={24} 
-                  className={`transition-all duration-300 ${
-                    isOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-75'
-                  }`} 
-                />
-              </div>
-            </Button>
+      {/* Mobile Menu Button */}
+      <Button
+        variant="ghost"
+        size="sm"
+        className={`md:hidden relative z-60 p-2 rounded-xl transition-all duration-500 hover:scale-110 ${
+          isOpen 
+            ? 'text-primary bg-primary/10 shadow-lg shadow-primary/20' 
+            : 'text-foreground hover:bg-secondary/50'
+        }`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="relative w-6 h-6">
+          {/* Animated Hamburger Lines */}
+          <span 
+            className={`absolute left-0 w-6 h-0.5 bg-current transition-all duration-500 ease-out ${
+              isOpen 
+                ? 'top-3 rotate-45 scale-110' 
+                : 'top-1 rotate-0 scale-100'
+            }`}
+          />
+          <span 
+            className={`absolute left-0 top-3 w-6 h-0.5 bg-current transition-all duration-300 ${
+              isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+            }`}
+          />
+          <span 
+            className={`absolute left-0 w-6 h-0.5 bg-current transition-all duration-500 ease-out ${
+              isOpen 
+                ? 'top-3 -rotate-45 scale-110' 
+                : 'top-5 rotate-0 scale-100'
+            }`}
+          />
+        </div>
+      </Button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ease-out ${
+        className={`fixed inset-0 z-40 md:hidden transition-all duration-700 ease-out ${
           isOpen 
-            ? 'opacity-100 backdrop-blur-md bg-background/20' 
+            ? 'opacity-100 backdrop-blur-lg bg-background/30' 
             : 'opacity-0 pointer-events-none backdrop-blur-none'
         }`}
         onClick={() => setIsOpen(false)}
@@ -156,28 +166,53 @@ const Navigation = () => {
 
       {/* Mobile Navigation Menu */}
       <div 
-        className={`fixed top-16 left-0 right-0 z-40 md:hidden transition-all duration-500 ease-out transform ${
+        className={`fixed top-16 left-4 right-4 z-40 md:hidden transition-all duration-700 ease-out transform ${
           isOpen 
-            ? 'translate-y-0 opacity-100' 
-            : '-translate-y-full opacity-0'
+            ? 'translate-y-0 opacity-100 scale-100' 
+            : '-translate-y-8 opacity-0 scale-95 pointer-events-none'
         }`}
       >
-        <div className="bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-2xl">
-          <div className="flex flex-col space-y-2 p-6">
+        <div className="bg-background/95 backdrop-blur-2xl border border-border/30 shadow-2xl rounded-2xl overflow-hidden">
+          {/* Menu Header */}
+          <div className="bg-gradient-primary/10 p-4 border-b border-border/20">
+            <div className="flex items-center justify-center">
+              <div className="w-12 h-1 bg-gradient-primary rounded-full opacity-60"></div>
+            </div>
+          </div>
+          
+          {/* Menu Items */}
+          <div className="flex flex-col p-4">
             {navItems.map((item, index) => (
               <button
                 key={index}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-left text-foreground/80 hover:text-primary transition-all duration-300 font-medium py-4 px-4 rounded-lg hover:bg-primary/10 group relative overflow-hidden ${
+                className={`text-left text-foreground/80 hover:text-primary transition-all duration-500 font-medium py-4 px-6 rounded-xl hover:bg-gradient-primary/5 group relative overflow-hidden transform hover:scale-[1.02] active:scale-[0.98] ${
                   isOpen ? 'animate-fade-in' : ''
                 }`}
-                style={{ animationDelay: `${index * 50}ms` }}
+                style={{ 
+                  animationDelay: `${index * 100 + 200}ms`,
+                  animationFillMode: 'both'
+                }}
               >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
-                <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <span className="relative z-10 font-medium text-lg">{item.name}</span>
+                
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-all duration-500 rounded-xl transform scale-x-0 group-hover:scale-x-100 origin-left"></div>
+                
+                {/* Bottom border animation */}
+                <div className="absolute bottom-2 left-6 right-6 h-0.5 bg-gradient-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
+                
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl blur-sm"></div>
               </button>
             ))}
+          </div>
+          
+          {/* Menu Footer */}
+          <div className="bg-gradient-primary/5 p-4 border-t border-border/20">
+            <div className="text-center text-xs text-foreground/50 font-mono">
+              Navigate • Explore • Discover
+            </div>
           </div>
         </div>
       </div>
