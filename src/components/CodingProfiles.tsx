@@ -92,7 +92,7 @@ const CodingProfiles = () => {
       accentColor: "text-purple-500",
       logo: (
         <img
-          src="https://image.pngaaa.com/134/6179134-middle.png" 
+          src="https://cdn.codechef.com/images/cc-logo.svg" 
           alt="Logo"
           className="w-8 h-8 object-contain"
         />
