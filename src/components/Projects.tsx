@@ -16,7 +16,7 @@ const Projects = () => {
     githubUrl: "https://github.com/Heyykrishnna/quiz-oasis-portal",
     type: "Web Application",
     status: "Live",
-    year: "2024",
+    year: "2025",
     stars: 42,
     category: "AI/ML"
   }, {
@@ -28,7 +28,7 @@ const Projects = () => {
     features: ["Interactive charts", "Real-time updates", "Data filtering", "Export functionality"],
     type: "Data Science",
     status: "In Development",
-    year: "2024",
+    year: "2025",
     stars: 28,
     category: "Data Science"
   }, {
@@ -40,7 +40,7 @@ const Projects = () => {
     features: ["Sentiment analysis", "Trend prediction", "Multi-platform support", "Custom reports"],
     type: "AI/ML Application",
     status: "Coming Soon",
-    year: "2024",
+    year: "2025",
     stars: 15,
     category: "AI/ML"
   }, {
@@ -53,7 +53,7 @@ const Projects = () => {
     githubUrl: "https://github.com/Heyykrishnna/Bitcoin_temp",
     type: "Mobile App",
     status: "Live",
-    year: "2023",
+    year: "2024",
     stars: 67,
     category: "Mobile"
   }];
