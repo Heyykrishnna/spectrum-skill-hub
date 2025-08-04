@@ -20,9 +20,9 @@ const CodingProfiles = () => {
         { label: "Contest Rating", value: "2000", icon: <Trophy className="w-4 h-4" />, progress: 92 },
         { label: "Global Ranking", value: "Top 45%", icon: <Target className="w-4 h-4" />, progress: 78 }
       ],
-      color: "from-orange-500 to-yellow-500",
-      bgColor: "bg-orange-500/10",
-      accentColor: "text-orange-500",
+      color: "from-orange-300 to-yellow-300",
+      bgColor: "bg-orange-300/10",
+      accentColor: "text-orange-300",
       logo: (
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png?20191202080835" // replace with your actual logo URL or local path
