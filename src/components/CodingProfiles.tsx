@@ -144,15 +144,9 @@ const CodingProfiles = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-primary flex items-center justify-center animate-bounce">
-              <Code className="w-6 h-6 text-primary-foreground" />
-            </div>
             <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-foreground">
               Coding <span className="heading-gradient">Profiles</span>
             </h2>
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-secondary to-accent flex items-center justify-center animate-bounce" style={{animationDelay: "0.5s"}}>
-              <Trophy className="w-6 h-6 text-primary-foreground" />
-            </div>
           </div>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto font-mono">
             Showcasing consistent problem-solving skills and competitive programming achievements across top platforms
