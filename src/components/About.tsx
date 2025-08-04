@@ -47,12 +47,19 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="prose prose-invert max-w-none font-mono space-y-6">
-              <p className="text-lg leading-relaxed text-foreground/90">
-                Hey there! I'm <span className="text-primary font-semibold">Yatharth Khandelwal</span>, 
-                a BTech Computer Science & AI student at <span className="text-accent font-semibold">Newton School of Technology</span>. 
-                My journey in tech began with curiosity and evolved into a passion for creating 
-                intelligent solutions that make a difference.
-              </p>
+              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/40 border border-primary/20 p-6 hover:border-primary/40 transition-all duration-500 hover:shadow-glow-primary/30 animate-fade-in">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-primary rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
+                <div className="relative z-10">
+                  <div className="w-8 h-1 bg-gradient-primary rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+                  <p className="text-lg leading-relaxed text-foreground/90 group-hover:text-foreground transition-colors duration-300">
+                    Hey there! I'm <span className="text-primary font-semibold group-hover:text-primary/90 transition-colors">Yatharth Khandelwal</span>, 
+                    a BTech Computer Science & AI student at <span className="text-accent font-semibold group-hover:text-accent/90 transition-colors">Newton School of Technology</span>. 
+                    My journey in tech began with curiosity and evolved into a passion for creating 
+                    intelligent solutions that make a difference.
+                  </p>
+                </div>
+              </div>
               
               <p className="text-lg leading-relaxed text-foreground/90">
                 I specialize in building robust web applications and exploring AI/ML implementations. 
