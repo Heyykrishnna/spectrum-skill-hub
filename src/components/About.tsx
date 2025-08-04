@@ -46,40 +46,28 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="prose prose-invert max-w-none font-mono space-y-6">
-              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/40 border border-primary/20 p-6 hover:border-primary/40 transition-all duration-500 hover:shadow-glow-primary/30 animate-fade-in">
+            <div className="prose prose-invert max-w-none font-mono">
+              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/40 border border-primary/20 p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-glow-primary/30 animate-fade-in">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-primary rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
-                <div className="relative z-10">
-                  <div className="w-8 h-1 bg-gradient-primary rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
+                <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-full opacity-15 group-hover:scale-110 transition-transform duration-700"></div>
+                <div className="relative z-10 space-y-6">
+                  <div className="w-12 h-1.5 bg-gradient-primary rounded-full mb-6 group-hover:w-16 transition-all duration-300"></div>
+                  
                   <p className="text-lg leading-relaxed text-foreground/90 group-hover:text-foreground transition-colors duration-300">
                     Hey there! I'm <span className="text-primary font-semibold group-hover:text-primary/90 transition-colors">Yatharth Khandelwal</span>, 
                     a BTech Computer Science & AI student at <span className="text-accent font-semibold group-hover:text-accent/90 transition-colors">Newton School of Technology</span>. 
                     My journey in tech began with curiosity and evolved into a passion for creating 
                     intelligent solutions that make a difference.
                   </p>
-                </div>
-              </div>
-              
-              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/10 border border-secondary/30 p-6 hover:border-secondary/50 transition-all duration-500 hover:shadow-glow-primary/20 animate-fade-in" style={{animationDelay: "0.2s"}}>
-                <div className="absolute inset-0 bg-gradient-to-l from-secondary/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-700"></div>
-                <div className="relative z-10">
-                  <div className="w-6 h-1 bg-gradient-to-r from-secondary to-primary rounded-full mb-4 group-hover:w-10 transition-all duration-300"></div>
+                  
                   <p className="text-lg leading-relaxed text-foreground/90 group-hover:text-foreground transition-colors duration-300">
                     I specialize in building robust web applications and exploring AI/ML implementations. 
                     From crafting intuitive user interfaces to developing complex backend systems, 
                     I love the entire spectrum of software development. My goal is to leverage technology 
                     to solve real-world problems and create meaningful impact.
                   </p>
-                </div>
-              </div>
 
-              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/30 p-6 hover:border-accent/50 transition-all duration-500 hover:shadow-glow-primary/20 animate-fade-in" style={{animationDelay: "0.4s"}}>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full opacity-30 group-hover:scale-125 transition-transform duration-700"></div>
-                <div className="relative z-10">
-                  <div className="w-10 h-1 bg-gradient-to-r from-accent to-primary rounded-full mb-4 group-hover:w-14 transition-all duration-300"></div>
                   <p className="text-lg leading-relaxed text-foreground/90 group-hover:text-foreground transition-colors duration-300">
                     When I'm not coding, you'll find me diving deep into the latest AI research, 
                     contributing to open-source projects, or experimenting with new frameworks. 
