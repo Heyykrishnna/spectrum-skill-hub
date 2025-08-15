@@ -12,7 +12,7 @@ const Projects = () => {
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
     technologies: ["React", "Node.js", "TensorFlow.js", "MongoDB", "Express"],
     features: ["Smart scheduling", "Productivity analytics", "Team collaboration", "Seamless Connectivity"],
-    demoUrl: "https://oasisquiz.lovable.app/",
+    demoUrl: "https://quizoasis.vercel.app/",
     githubUrl: "https://github.com/Heyykrishnna/quiz-oasis-portal",
     type: "Web Application",
     status: "Live",
