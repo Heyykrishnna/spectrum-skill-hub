@@ -122,7 +122,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-card/50 border border-border/80 hover:border-primary/60 transition-all duration-300">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-card-foreground">
+              <h3 className="text-4xl font-bold mb-6 text-card-foreground text-align-centre">
                 Send me a message
               </h3>
               
