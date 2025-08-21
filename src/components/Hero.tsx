@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -82,6 +82,14 @@ const Hero = () => {
             rel="noopener noreferrer"
           >
             <Linkedin size={24} />
+          </a>
+          <a 
+            href="https://www.instagram.com/heyy_krishnna/" 
+            className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram size={24} />
           </a>
           <a 
             href="mailto:yatharth.khandelwal39@gmail.com" 
