@@ -14,6 +14,7 @@ import {
   Code2,
   Coffee,
   Sparkles,
+  BrainCircuit,
   Zap
 } from "lucide-react";
 
@@ -235,7 +236,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-muted-foreground text-sm font-mono">
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+              <BrainCircuit className="w-4 h-4 text-red-500 animate-pulse" />
               <span>by Yatharth Khandelwal</span>
             </div>
             
