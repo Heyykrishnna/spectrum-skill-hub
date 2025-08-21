@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, BriefcaseBusiness, Github, Linkedin, Twitter, Send, Download, Loader2 } from "lucide-react";
+import { Mail, Phone, BriefcaseBusiness, Github, Linkedin, Twitter, Send, Download, Loader2, Instagram } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(50, "Name must be less than 50 characters"),
@@ -102,6 +102,12 @@ const Contact = () => {
       label: "Twitter",
       href: "https://x.com/hey_krishnna",
       username: "@yatharth"
+    },
+    {
+      icon: <Instagram className="w-5 h-5" />,
+      label: "Instagram",
+      href: "https://www.instagram.com/heyy_krishnna/",
+      username: "@heyy_krishnna"
     }
   ];
 
