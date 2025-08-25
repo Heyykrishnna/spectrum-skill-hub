@@ -47,10 +47,10 @@ const Skills = () => {
       title: "Frontend Development",
       icon: <Code className="w-6 h-6" />,
       skills: [
-        { name: "React", level: 90, color: "primary" },
+        { name: "React and React Native", level: 90, color: "primary" },
         { name: "JavaScript", level: 85, color: "warning" },
         { name: "HTML/CSS", level: 95, color: "success" },
-        { name: "React Native", level: 80, color: "accent" }
+        { name: "TypeScript", level: 80, color: "accent" }
       ]
     },
     {
@@ -58,7 +58,7 @@ const Skills = () => {
       icon: <Database className="w-6 h-6" />,
       skills: [
         { name: "Node.js", level: 85, color: "success" },
-        { name: "Python", level: 80, color: "accent" },
+        { name: "Supabase", level: 90, color: "accent" },
         { name: "SQL", level: 85, color: "primary" },
         { name: "API Development", level: 80, color: "warning" }
       ]
@@ -74,12 +74,12 @@ const Skills = () => {
       ]
     },
     {
-      title: "Mobile Development",
+      title: "Website UI/UX",
       icon: <Smartphone className="w-6 h-6" />,
       skills: [
         { name: "React Native", level: 80, color: "primary" },
         { name: "Cross-Platform", level: 65, color: "accent" },
-        { name: "App Deployment", level: 50, color: "success" },
+        { name: "Figma", level: 50, color: "success" },
         { name: "UI/UX Design", level: 70, color: "warning" }
       ]
     }
